@@ -1,11 +1,9 @@
-console.log('123');
 
+// TODO: Big logo and then scale down to begin password Generator
 
-// Big logo and then scale down to begin password Generator
+// TODO: Add onload line to go under h2
 
-// Add onload line to go under h2
-
-// Add the transition from CodePen for result
+// TODO: Add the transition from CodePen for result
 
 // to show the results
 const resultEl = document.getElementById('result');
@@ -91,6 +89,13 @@ function generatePassword(lower, upper, number, symbol, length) {
   for(let i = 0; i < length; i+=typesCount){
     typesArr.forEach(type => {
       console.log(type);
+
+      // TODO: Testing out to randomize the order 
+      const randomName = Object.keys(type)
+      const prop = randomName[Math.floor(Math.random() * randomName.length)]
+      console.log(prop);
+      // TODO: End of testing
+
       const funcName = Object.keys(type)[0];
       // Randomize the order
       console.log('funName:', funcName);
