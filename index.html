@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link href= "./styles/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <div class="logo">
+  <!-- Fade in and flicker -->
+    <svg width="500" height="500" viewBox="0 0 175 225">
+      <circle cx="90" cy="110" r="75" ry="5" stroke="white" fill="#0a2b58" stroke-width="3"/>
+      <polygon fill="white" points="35 75 45 75 60 140 50 140" />
+      <polygon fill="white" points="50 75 60 75 75 130 65 130" />
+      <polygon fill="white" points="65 130 80 90 92 90 75 130" />
+      <polygon fill="white" points="110 130 98 90 86 90 100 130" />
+      <polygon fill="white" points="130 75 120 75 100 130 110 130" />
+      <polygon fill="white" points="145 75 135 75 115 140 125 140" />
+
+      <text x="50" y="160" font-size="11px" fill="white" /> 
+    </svg>
+  </div>
+
+  <!-- <p class="test1">Hello to the world</p>
+  <p class="test2">Hello to the world</p>
+  <p class="test3">Hello to the world</p> -->
+
+  <div class="container">
+    <h2>Password Generator  <i class="fa-solid fa-shield-halved"></i></h2>
+    <div class="result-container">
+      <span id="result"></span>
+      <button class="btn" id="clipboard">
+        <i class="far fa-clipboard"></i>
+      </button>
+    </div>
+
+    <div class="settings">
+      <div class="setting">
+        <label>Password Length: </label>
+        <input type="number" id="length" min="8" max="20" value="20">
+      </div>
+      <div class ="setting">
+        <label>Include uppercase letters:</label>
+        <input type="checkbox" id="uppercase" checked>
+      </div>
+      <div class ="setting">
+        <label>Include lowercase letters:</label>
+        <input type="checkbox" id="lowercase" checked>
+      </div>
+      <div class ="setting">
+        <label>Include numbers:</label>
+        <input type="checkbox" id="numbers" checked>
+      </div>
+      <div class ="setting">
+        <label>Include symbols:</label>
+        <input type="checkbox" id="symbols" checked>
+      </div>
+
+    </div>
+
+    <button class="btn btn-large" id="generate">Generate Password <i class="fa-solid fa-circle-nodes"></i></button>
+
+  </div>
+
+  
+<script src="./src/main.js"></script>
+  
+</body>
+</html>
