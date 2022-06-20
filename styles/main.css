@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Akshar&family=Anek+Malayalam&family=Kdam+Thmor+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;600&display=swap');
+
 :root{
   --header-font: 'Kdam Thmor Pro', sans-serif;
   --anek-font: 'Anek Malayalam', sans-serif;
@@ -102,6 +103,8 @@ label {
   /* So words don't overlap */
   max-width: calc(100% - 45px);
   font-family: var(--pass-font);
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .result-container .btn{

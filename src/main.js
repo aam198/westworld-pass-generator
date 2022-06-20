@@ -49,7 +49,6 @@ clipboardEl.addEventListener('click', () => {
 
   // Make a toast instead
   alert('Password is copied to the clipboard!');
-
 })
 
 
@@ -67,21 +66,37 @@ generateEl.addEventListener('click', () => {
   resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumbers, hasSymbols, length);
 })
 
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+  // While remaining elements to shuffle
+  while (currentIndex != 0) {
+    // Pick a remaining element
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // and then swap it with the current element
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+  return array;
+}
+
 function generatePassword(lower, upper, number, symbol, length) {
   // Empty by start
   let generatedPassword = '';
   // Types count - The count of how many are selected
   const typesCount = lower + upper + number + symbol;
-  console.log(typesCount);
+  console.log('this is types count', typesCount);
   
   // putting each into an array and filtering out the ones that are not checked, or False as a value
   const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
   console.log(typesArr);
 
+  // Send typesArr to shuffle function
+  shuffle(typesArr);
+
   if(typesCount === 0) {
     return '';
   }
-
 
 
   // To create the characters
@@ -90,11 +105,9 @@ function generatePassword(lower, upper, number, symbol, length) {
     typesArr.forEach(type => {
       console.log(type);
 
-      // TODO: Testing out to randomize the order 
       const randomName = Object.keys(type)
       const prop = randomName[Math.floor(Math.random() * randomName.length)]
-      console.log(prop);
-      // TODO: End of testing
+      console.log('prop', prop);
 
       const funcName = Object.keys(type)[0];
       // Randomize the order
