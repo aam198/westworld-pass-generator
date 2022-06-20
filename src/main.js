@@ -36,19 +36,21 @@ clipboardEl.addEventListener('click', () => {
 
   if(!password) {
   // Just return and do nothing
-    return
+    alert('No password to copy, please select Generate Password');
   }
+  else {
 
-  textArea.value = password;
+    textArea.value = password;
 
-  document.body.appendChild(textArea)
-  // Selects everything in the textarea
-  textArea.select()
-  document.execCommand('copy');
-  textArea.remove();
+    document.body.appendChild(textArea)
+    // Selects everything in the textarea
+    textArea.select()
+    document.execCommand('copy');
+    textArea.remove();
 
-  // Make a toast instead
-  alert('Password is copied to the clipboard!');
+    // Make a toast instead
+    alert('Password is copied to the clipboard!');
+  }
 })
 
 
