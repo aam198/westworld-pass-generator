@@ -7,7 +7,9 @@
   --akshar-font: 'Akshar', sans-serif;
   --pass-font: 'Red Hat Mono', monospace;
   --blue-color: #0a2b58;
+  --hex-blue: 10,43,88;
   --light-blue: #a9dbf4;
+  --hex-light-blue: 169,219,244;
   --grey-blue: #acbecb;
   --orange: #ff8a03;
 }
@@ -108,18 +110,20 @@ label {
 }
 
 .result-container .btn{
+  color: var(--grey-blue);
   position: absolute;
   top: 6px;
   right: 5px;
   font-size: 1.2rem;
   height: 45px;
   width: 45px;
-  transition: background-color 300ms ease-in-out, color 250ms ease-in-out;
+  transition: all 0.3s ease;
+
 }
 
 .result-container .btn:hover{
-  background-color: var(--light-blue);
-  color: var(--blue-color);
+  color: var(--light-blue);
+  box-shadow: rgba(var(--hex-blue), 0.5) 0px 0px 16px 0px;
 }
 
 
@@ -138,11 +142,13 @@ label {
   color: var(--blue-color);
   padding: 0.8rem;
   font-size: 1.5rem;
-  transition: background-color 200ms ease-in;
+  transition: box-shadow 0.3s ease, transform 0.4s ease-in;
 }
 
 .btn-large:hover{
   background-color: var(--light-blue);
+  box-shadow: rgba(var(--hex-light-blue), 0.5) 0px 0px 16px 0px;
+  transform:  translateY(-2px);
 }
 
 
