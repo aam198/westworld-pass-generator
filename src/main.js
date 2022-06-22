@@ -4,6 +4,7 @@
 // TODO: Add onload line to go under h2
 
 // TODO: Add the transition from CodePen for result
+// TODO: Add keypress event also
 
 // to show the results
 const resultEl = document.getElementById('result');

@@ -25,12 +25,12 @@
     </svg>
   </div>
 
-  <!-- <p class="test1">Hello to the world</p>
-  <p class="test2">Hello to the world</p>
-  <p class="test3">Hello to the world</p> -->
+
 
   <div class="container">
+
     <h2>Password Generator  <i class="fa-solid fa-shield-halved"></i></h2>
+    
     <div class="result-container">
       <span id="result"></span>
       <button class="btn" id="clipboard">
@@ -38,26 +38,30 @@
       </button>
     </div>
 
-    <div class="settings">
+    <div class="settings toggle-container">
       <div class="setting">
         <label>Password Length: </label>
         <input type="number" id="length" min="8" max="20" value="12">
       </div>
       <div class ="setting">
         <label>Include uppercase letters:</label>
-        <input type="checkbox" id="uppercase" checked>
+        <input type="checkbox" id="uppercase" class="toggle" checked>
+        <label for="uppercase" class="label"><div class="ball"></div></label>
       </div>
       <div class ="setting">
         <label>Include lowercase letters:</label>
-        <input type="checkbox" id="lowercase" checked>
+        <input type="checkbox" id="lowercase" class="toggle" checked>
+        <label for="lowercase" class="label"><div class="ball"></div></label>
       </div>
       <div class ="setting">
         <label>Include numbers:</label>
-        <input type="checkbox" id="numbers" checked>
+        <input type="checkbox" id="numbers" class="toggle" checked>
+        <label for="numbers" class="label"><div class="ball"></div></label>
       </div>
       <div class ="setting">
         <label>Include symbols:</label>
-        <input type="checkbox" id="symbols" checked>
+        <input type="checkbox" id="symbols" class="toggle"  checked>
+        <label for="symbols" class="label"><div class="ball"></div></label>
       </div>
 
     </div>
@@ -66,6 +70,7 @@
 
   </div>
 
+  
   
 <script src="./src/main.js"></script>
   
